@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:android.support.design="http://schemas.android.com/tools"
+android:id="@+id/second_content"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<!-- 上半部分的填补，注意height要设为指定长度-->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/upLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.example.admin.edumap.layout.LocationLayout
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            ></com.example.admin.edumap.layout.LocationLayout>
+
+        <LinearLayout
+            android:id="@+id/second_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true">
+        </LinearLayout>
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/map"
+            android:layout_below="@id/location"
+            android:layout_above="@id/second_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.amap.api.maps.MapView>
+
+        <WebView
+            android:id="@+id/web_view_heat_map"
+            android:layout_below="@id/location"
+            android:layout_above="@id/second_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+        </WebView>
+
+
+        <ImageView
+            android:id="@+id/map_floating_type"
+            android:layout_below="@id/location"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/map_floating_type"
+            />
+
+        <ImageView
+            android:id="@+id/button_sift"
+            android:layout_below="@id/location"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/icon_sift"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/map_floating_group"
+            android:visibility="gone"
+            android:layout_below="@id/map_floating_type"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/map_floating_group"
+            />
+
+        <ImageView
+            android:id="@+id/map_floating_resource"
+            android:visibility="gone"
+            android:layout_below="@id/map_floating_group"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/map_floating_resource"
+            />
+
+
+        <ImageView
+            android:id="@+id/map_type_legend"
+            android:visibility="gone"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="25dp"
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:src="@drawable/map_type_legend"
+            />
+
+        <ImageView
+            android:id="@+id/map_type_legend_hot"
+            android:visibility="gone"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="45dp"
+            android:layout_width="60dp"
+            android:layout_height="200dp"
+            android:src="@drawable/map_type_legend_hot"
+            />
+
+        <ImageView
+            android:id="@+id/map_union1"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="51dp"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:src="@drawable/union1"
+            />
+        <ImageView
+            android:id="@+id/map_union2"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_above="@id/map_union1"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:src="@drawable/union2"
+            />
+        <ImageView
+            android:id="@+id/map_union3"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_above="@id/map_union2"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:src="@drawable/union3"
+            />
+        <ImageView
+            android:id="@+id/map_union4"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_above="@id/map_union3"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:src="@drawable/union4"
+            />
+        <ImageView
+            android:id="@+id/map_union5"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_above="@id/map_union4"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:src="@drawable/union5"
+            />
+        <ImageView
+            android:id="@+id/map_union6"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_above="@id/map_union5"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:src="@drawable/union6"
+            />
+        <ImageView
+            android:id="@+id/map_union7"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_above="@id/map_union6"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:src="@drawable/union7"
+            />
+
+
+
+        <RelativeLayout
+            android:id="@+id/routemap_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            android:layout_alignParentTop="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/routemap_choose"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/primary"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <ImageView
+                    android:id="@+id/img_return"
+                    android:layout_height="28dp"
+                    android:layout_width="28dp"
+                    android:layout_gravity="center"
+                    android:onClick="onReturnClick"
+                    android:src="@drawable/head_return"
+                    android:paddingLeft="@dimen/offset_title_left"
+                    android:paddingStart="@dimen/offset_title_left"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="onDriveClick" >
+
+                    <ImageView
+                        android:id="@+id/route_drive"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/route_drive_normal"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="onBusClick" >
+
+                    <ImageView
+                        android:id="@+id/route_bus"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/route_bus_normal" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="onWalkClick" >
+
+                    <ImageView
+                        android:id="@+id/route_walk"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/route_walk_normal" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:padding="5dp"
+            android:background="@color/accent"
+            android:gravity="center_vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/firstline"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="12dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/secondline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/firstline"
+                android:layout_marginLeft="12dp"
+                android:gravity="right"
+                android:singleLine="true"
+                android:textColor="@color/lightGray"
+                android:textSize="13sp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/detail"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="详情"
+                    android:textColor="@color/yellow"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:layout_width="7dp"
+                    android:layout_height="13dp"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/arrow_right_yellow"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/bus_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/routemap_header"
+            android:background="@color/transparent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ListView
+                android:id="@+id/bus_result_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:fadingEdge="none"
+                android:fadingEdgeLength="0dp"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:listSelector="#00000000" >
+            </ListView>
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/upLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+    </RelativeLayout>
+
+
+<LinearLayout
+    android:id="@+id/second_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:orientation="vertical"
+    android:background="#E8E8E8"
+    app:behavior_peekHeight="46dp"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    >
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/second_tabanim_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:tabTextColor="@color/black"
+        app:tabSelectedTextColor="@color/accent"
+        app:tabIndicatorColor="@color/accent"
+        app:tabBackground="@color/white"
+        >
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/second_tabanim_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">EduMap</string>
+
+    <string-array name="relation">
+        <item>幼儿园</item>
+        <item>小学</item>
+        <item>初中</item>
+        <item>高中</item>
+    </string-array>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">下一页</string>
+    <string name="skip">跳过它</string>
+    <string name="start">开始吧</string>
+
+    <string name="slide_1_title">教育资源分布</string>
+    <string name="slide_1_desc">名人故居、讲座、公开课……</string>
+
+    <string name="slide_2_title">学区学校地图</string>
+    <string name="slide_2_desc">轻巧快捷，免去翻页的烦恼</string>
+
+    <string name="slide_3_title">家长圈</string>
+    <string name="slide_3_desc">妈妈再也不用担心我的学习啦</string>
+
+    <string name="slide_4_title">教学质量信息</string>
+    <string name="slide_4_desc">最新政策、分数线、对口升学一箩筐</string>
+
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
+    <string name="logout">退出登录</string>
+    <string name="progress_dialog_title">请稍等</string>
+    <string name="progress_dialog_tips">网页加载中...</string>
+
+
+
+</resources>

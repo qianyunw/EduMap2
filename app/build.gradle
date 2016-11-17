@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.example.admin.edumap"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs '../slp-sdk/aars'
+    }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:support-annotations:23.4.0'
+    compile files('libs/android-support-v4.jar')
+    compile files('libs/gson-2.2.4.jar')
+    compile files('libs/Volley.jar')
+    compile files('libs/AMap_2DMap_V2.9.0_20160525.jar')
+    compile files('libs/AMap_3DMap_V3.3.1_20160419.jar')
+    compile files('libs/AMap_Location_V3.00_20160922.jar')
+    compile files('libs/AMap_Search_V3.2.1_20160308.jar')
+
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.3.2'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.3.2'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.3.2'
+    compile 'com.j256.ormlite:ormlite-android:4.48'
+    compile 'com.j256.ormlite:ormlite-core:4.48'
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.5.0'
+    compile 'de.mindpipe.android:android-logging-log4j:1.0.3'
+    compile 'log4j:log4j:1.2.16'
+    compile 'commons-io:commons-io:2.4'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+
+
+    //智慧学伴依赖包
+    compile(name: 'slp-sdk-0.8.3-beta7', ext: 'aar')
+    compile(name: 'processcheck-1.0.8', ext: 'aar')
+    compile(name: 'commons-util-aar-1.1.6.9.smartcan.proguard', ext: 'aar')
+    compile(name: 'datalayer-aar-1.1.6.9.smartcan.proguard', ext: 'aar')
+    compile(name: 'datatransfer-aar-1.1.6.9.smartcan.proguard', ext: 'aar')
+    compile(name: 'framework-aar-1.1.6.9.smartcan.proguard', ext: 'aar')
+    compile(name: 'network-aar-1.1.6.9.smartcan.proguard', ext: 'aar')
+    compile(name: 'smartcan-core-aar-1.1.6.9.smartcan.proguard', ext: 'aar')
+    compile(name: 'smartcan-datacollection-aar-1.1.6.9.smartcan.proguard', ext: 'aar')
+    compile(name: 'smartcan-accountclient-aar-1.2.1.9.ucsdk.proguard', ext: 'aar')
+    compile(name: 'virtualorgsdk-0.0.3.9.vorgsdk.proguard', ext: 'aar')
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/act_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout 
+        android:id="@+id/route_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/primary">
+        <LinearLayout
+            android:id="@+id/title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:descendantFocusability="beforeDescendants"
+            android:gravity="center_vertical"
+            android:onClick="onBackClick"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/offset_title_left"
+            android:paddingStart="@dimen/offset_title_left" >
+
+            <ImageView
+                android:layout_height="28dp"
+                android:layout_width="28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/head_return"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/title_center"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text=""
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:background="@color/primary"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/firstline"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="12dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/secondline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstline"
+            android:layout_marginLeft="12dp"
+            android:gravity="right"
+            android:singleLine="true"
+            android:textColor="#999999"
+            android:textSize="13sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e0e0e0"/>
+
+    <ListView
+        android:id="@+id/bus_segment_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/transparent"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="@color/transparent" >
+    </ListView>
+
+</LinearLayout>

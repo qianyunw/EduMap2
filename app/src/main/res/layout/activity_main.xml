@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:android.support.design="http://schemas.android.com/tools"
+	android:id="@+id/main_content"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white">
+
+	<!-- 上半部分的填补，注意height要设为指定长度-->
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		tools:context="com.example.admin.edumap.MainActivity" >
+
+		<com.example.admin.edumap.layout.LocationLayout
+			android:id="@+id/location"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			></com.example.admin.edumap.layout.LocationLayout>
+
+		<LinearLayout
+			android:id="@+id/main_bottom_bar"
+			android:layout_width="match_parent"
+			android:layout_height="52dp"
+			android:orientation="vertical"
+			android:layout_alignParentBottom="true">
+		</LinearLayout>
+
+
+
+		<ImageView
+			android:id="@+id/image_beijing"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_below="@id/location"
+			android:layout_above="@id/main_bottom_bar"
+			android:scaleType="fitStart"
+			android:src="@drawable/beijing"
+			/>
+
+		<ImageView
+			android:id="@+id/alternative"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_below="@id/location"
+			android:layout_above="@id/main_bottom_bar"
+			android:scaleType="fitStart"
+			android:src="@drawable/changping"
+			android:visibility="gone"
+			/>
+
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:id="@+id/upLayout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:visibility="gone"
+		>
+	</RelativeLayout>
+
+	<LinearLayout
+		android:id="@+id/main_bottom_sheet"
+		android:layout_width="match_parent"
+		android:layout_height="350dp"
+		android:orientation="vertical"
+		app:behavior_peekHeight="76dp"
+		app:layout_behavior="@string/bottom_sheet_behavior"
+		>
+
+		<android.support.design.widget.TabLayout
+			android:id="@+id/tabanim_tabs"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_marginTop="30dp"
+
+			app:tabTextColor="@color/black"
+			app:tabSelectedTextColor="@color/accent"
+			app:tabIndicatorColor="@color/accent"
+			app:tabBackground="@color/white"
+
+			>
+		</android.support.design.widget.TabLayout>
+
+		<android.support.v4.view.ViewPager
+			android:id="@+id/tabanim_viewpager"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			/>
+	</LinearLayout>
+
+
+	<android.support.design.widget.FloatingActionButton
+		android:id="@+id/my"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/my"
+		app:layout_anchor="@id/main_bottom_sheet"
+		app:layout_anchorGravity="top|center"
+
+		/>
+
+</android.support.design.widget.CoordinatorLayout>

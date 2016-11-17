@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/primary"
+    android:orientation="horizontal" >
+    
+    <ImageView
+        android:id="@+id/img_return"
+        android:layout_height="25dp"
+        android:layout_width="25dp"
+		android:layout_gravity="center"
+		android:src="@drawable/head_return"
+		android:paddingLeft="@dimen/offset_title_left"
+		/>
+
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="5dp"
+		android:layout_gravity="center"
+		android:layout_weight="1"
+		android:orientation="horizontal" >
+
+
+    <ImageView 
+        android:id="@+id/img_location"
+        android:layout_width="40dp"
+        android:layout_height="28dp"
+		android:layout_gravity="center"
+    	android:src="@drawable/icon_location"
+		/>
+    
+    <TextView
+        android:id="@+id/current_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+    	android:textSize="18dp"
+    	android:textColor="@color/white"
+		android:layout_gravity="center"
+		android:textStyle="bold"
+		/>
+	</LinearLayout>
+
+
+
+	<ImageView
+		android:id="@+id/button_search"
+		android:layout_marginRight="16dp"
+		android:layout_width="20dip"
+		android:layout_height="20dip"
+		android:layout_gravity="center"
+		android:src="@drawable/icon_search"
+		/>
+
+</LinearLayout>

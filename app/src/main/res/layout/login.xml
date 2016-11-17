@@ -1,0 +1,138 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <com.example.admin.edumap.layout.LocationLayout
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            ></com.example.admin.edumap.layout.LocationLayout>
+       
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="北京市教育资源地图"
+            android:textColor="#000000"
+            android:textSize="25dp" />
+
+        <EditText
+            android:id="@+id/accountEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="25dp"
+            
+            android:ems="10"
+            android:hint="请输入您的用户名"
+            android:textSize="18dp"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/pwdEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+
+            android:ems="10"
+            android:hint="请输入您的密码"
+            android:textSize="18dp"
+            android:password="true"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/subBtn"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/bluebutton"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:text="登 录" />
+        <Button
+            android:id="@+id/subBtn1"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bluebutton"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:text="注 册" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:layout_gravity="center"
+                android:text="通过第三方账号发布" />
+     
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+    
+        <Button
+            android:id="@+id/umeng_socialize_qq_on"
+            android:layout_width="55dp"
+            android:layout_height="59dp"
+            android:background="@drawable/umeng_socialize_qq_on"
+            android:layout_marginLeft="50dp"          
+            android:layout_weight="1"
+            android:onClick="onClickAuth" ></Button>
+        <Button
+            android:id="@+id/app_auth_weixin1"
+            android:layout_width="15dp"
+            android:layout_height="60dp"
+            android:background="@android:color/transparent"
+             ></Button>
+
+        <Button
+            android:id="@+id/app_auth_weixin"
+            android:layout_width="55dp"
+            android:layout_height="58dp"
+            android:background="@drawable/umeng_socialize_wechat"
+            android:onClick="onClickAuth"
+            android:layout_weight="1"
+             ></Button>
+
+        <Button
+            android:id="@+id/app_auth_weixin12"
+            android:layout_width="15dp"
+            android:layout_height="60dp"
+            android:background="@android:color/transparent"
+             ></Button>
+        <Button
+            android:id="@+id/app_auth_sina"
+            android:layout_width="55dp"
+            android:layout_height="60dp"
+            android:background="@drawable/umeng_socialize_sina_on"
+          
+            android:layout_marginRight="50dp"
+            android:layout_weight="1"
+            android:onClick="onClickAuth"
+            />
+    </LinearLayout>
+
+</LinearLayout>

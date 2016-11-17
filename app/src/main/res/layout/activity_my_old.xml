@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	>
+
+	<com.example.admin.edumap.layout.LocationLayout
+		android:id="@+id/location"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		></com.example.admin.edumap.layout.LocationLayout>
+
+
+	<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:android.support.design="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="192dp"
+		android:background="@color/primary"
+		>
+	<LinearLayout
+		android:id="@+id/background"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_gravity="center"
+		android:orientation="vertical">
+
+			<ImageView
+				android:id="@+id/login"
+				android:layout_width="250dp"
+				android:layout_height="110dp"
+				android:layout_marginTop="15dp"
+				android:layout_marginBottom="10dp"
+				android:layout_gravity="center"
+				android:src="@drawable/login"
+				/>
+			<TextView
+				android:id="@+id/text_admin"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="18dp"
+				android:text="登录 / 注册"
+				android:textColor="@color/white"
+				android:layout_gravity="center"
+				/>
+
+
+		<Button
+			android:id="@+id/logout"
+			android:visibility="gone"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:text="@string/logout"
+			android:textAllCaps="false"
+			android:textSize="18dp"
+			android:textColor="@color/white"
+			android:background="@color/primary"
+			/>
+
+
+
+	</LinearLayout>
+
+		<android.support.design.widget.FloatingActionButton
+			android:id="@+id/my"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/collect"
+			android:layout_margin="16dp"
+			app:layout_anchor="@id/background"
+			app:layout_anchorGravity="bottom|right"
+			/>
+
+	</android.support.design.widget.CoordinatorLayout>
+
+
+
+	<ListView
+		android:id="@+id/list_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+	</ListView>
+
+
+
+</LinearLayout>

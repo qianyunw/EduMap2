@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+	android:layout_height="40dp"
+	android:background="@color/primary"
+	android:orientation="horizontal" >
+
+    <AutoCompleteTextView
+        android:id="@+id/keyWord"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_weight="1"
+		android:layout_gravity="center"
+		android:layout_marginLeft="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="搜索学区或学校"
+    	android:textSize="15dp"
+		android:completionThreshold="1"
+		android:dropDownVerticalOffset="1.0dip"
+		android:imeOptions="actionDone"
+		android:inputType="text|textAutoComplete"
+		android:maxLength="20"
+		android:paddingRight="37.0dip"
+        android:padding="5dip"
+        android:singleLine="true"
+        />
+
+
+	<ImageView
+		android:id="@+id/button_search"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="16dp"
+		android:layout_width="20dip"
+		android:layout_height="20dip"
+		android:layout_gravity="center"
+		android:src="@drawable/icon_search"
+		/>
+
+</LinearLayout>
